@@ -1,0 +1,56 @@
+{
+  "googleCloud": {
+    "projectId": "${GOOGLE_CLOUD_PROJECT_ID}",
+    "location": "${GOOGLE_CLOUD_LOCATION}",
+    "credentials": "${GOOGLE_APPLICATION_CREDENTIALS}"
+  },
+  "datadog": {
+    "apiKey": "${DATADOG_API_KEY}",
+    "appKey": "${DATADOG_APP_KEY}",
+    "site": "${DATADOG_SITE}"
+  },
+  "application": {
+    "name": "${APP_NAME}",
+    "version": "${APP_VERSION}",
+    "environment": "${APP_ENVIRONMENT}"
+  },
+  "telemetry": {
+    "batchSize": 100,
+    "flushInterval": 5000,
+    "maxRetries": 3,
+    "retryDelay": 1000
+  },
+  "security": {
+    "enableDlpScanning": true,
+    "sensitiveDataTypes": [
+      "PERSON_NAME",
+      "EMAIL_ADDRESS",
+      "PHONE_NUMBER",
+      "CREDIT_CARD_NUMBER",
+      "US_SOCIAL_SECURITY_NUMBER",
+      "US_PASSPORT",
+      "US_DRIVER_LICENSE"
+    ],
+    "confidenceThreshold": 0.8
+  },
+  "cost": {
+    "currency": "USD",
+    "budgets": [
+      {
+        "id": "monthly-budget",
+        "name": "Monthly LLM Budget",
+        "limit": 1000.0,
+        "period": "monthly",
+        "alertThresholds": [50, 80, 95]
+      },
+      {
+        "id": "daily-budget",
+        "name": "Daily LLM Budget",
+        "limit": 50.0,
+        "period": "daily",
+        "alertThresholds": [60, 85, 95]
+      }
+    ],
+    "alertThresholds": [50, 80, 95]
+  }
+}

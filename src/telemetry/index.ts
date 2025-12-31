@@ -1,0 +1,1 @@
+export { DatadogTelemetryCollector } from './telemetry-collector';

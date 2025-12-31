@@ -1,0 +1,44 @@
+{
+  "googleCloud": {
+    "projectId": "dev-llm-monitor",
+    "location": "us-central1",
+    "credentials": "./credentials/gcp-service-account-dev.json"
+  },
+  "datadog": {
+    "apiKey": "${DATADOG_API_KEY}",
+    "appKey": "${DATADOG_APP_KEY}",
+    "site": "datadoghq.com"
+  },
+  "application": {
+    "name": "llm-observability-monitor-dev",
+    "version": "1.0.0-dev",
+    "environment": "development"
+  },
+  "telemetry": {
+    "batchSize": 10,
+    "flushInterval": 2000,
+    "maxRetries": 2,
+    "retryDelay": 500
+  },
+  "security": {
+    "enableDlpScanning": false,
+    "sensitiveDataTypes": [
+      "EMAIL_ADDRESS",
+      "PHONE_NUMBER"
+    ],
+    "confidenceThreshold": 0.7
+  },
+  "cost": {
+    "currency": "USD",
+    "budgets": [
+      {
+        "id": "dev-daily-budget",
+        "name": "Development Daily Budget",
+        "limit": 10.0,
+        "period": "daily",
+        "alertThresholds": [50, 80, 95]
+      }
+    ],
+    "alertThresholds": [60, 80, 95]
+  }
+}

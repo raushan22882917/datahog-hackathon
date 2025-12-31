@@ -1,0 +1,47 @@
+{
+  "googleCloud": {
+    "projectId": "${GOOGLE_CLOUD_PROJECT_ID}",
+    "location": "${GOOGLE_CLOUD_LOCATION}",
+    "credentials": "${GOOGLE_APPLICATION_CREDENTIALS}"
+  },
+  "datadog": {
+    "apiKey": "${DATADOG_API_KEY}",
+    "appKey": "${DATADOG_APP_KEY}",
+    "site": "${DATADOG_SITE}"
+  },
+  "application": {
+    "name": "llm-observability-monitor-staging",
+    "version": "${APP_VERSION}",
+    "environment": "staging"
+  },
+  "telemetry": {
+    "batchSize": 50,
+    "flushInterval": 3000,
+    "maxRetries": 3,
+    "retryDelay": 750
+  },
+  "security": {
+    "enableDlpScanning": true,
+    "sensitiveDataTypes": [
+      "PERSON_NAME",
+      "EMAIL_ADDRESS",
+      "PHONE_NUMBER",
+      "CREDIT_CARD_NUMBER",
+      "US_SOCIAL_SECURITY_NUMBER"
+    ],
+    "confidenceThreshold": 0.75
+  },
+  "cost": {
+    "currency": "USD",
+    "budgets": [
+      {
+        "id": "staging-daily-budget",
+        "name": "Staging Daily Budget",
+        "limit": 25.0,
+        "period": "daily",
+        "alertThresholds": [50, 80, 95]
+      }
+    ],
+    "alertThresholds": [50, 80, 95]
+  }
+}

@@ -1,0 +1,57 @@
+{
+  "name": "llm-observability-monitor",
+  "version": "1.0.0",
+  "description": "End-to-end monitoring solution for Large Language Model applications powered by Google Cloud's Vertex AI or Gemini",
+  "main": "dist/index.js",
+  "scripts": {
+    "build": "tsc",
+    "start": "node dist/api/server.js",
+    "dev": "ts-node src/api/server.ts",
+    "setup": "node scripts/setup.js",
+    "test": "jest",
+    "test:watch": "jest --watch",
+    "test:coverage": "jest --coverage",
+    "lint": "eslint src/**/*.ts",
+    "lint:fix": "eslint src/**/*.ts --fix"
+  },
+  "keywords": [
+    "llm",
+    "observability",
+    "monitoring",
+    "vertex-ai",
+    "gemini",
+    "datadog",
+    "ai",
+    "machine-learning"
+  ],
+  "author": "",
+  "license": "MIT",
+  "dependencies": {
+    "@datadog/datadog-api-client": "^1.0.0",
+    "@google-cloud/aiplatform": "^3.0.0",
+    "@google-cloud/dlp": "^5.0.0",
+    "@google-cloud/vertexai": "^1.4.0",
+    "@types/cors": "^2.8.19",
+    "@types/express": "^5.0.6",
+    "cors": "^2.8.5",
+    "dotenv": "^17.2.3",
+    "express": "^5.2.1",
+    "hot-shots": "^10.0.0",
+    "joi": "^17.9.0",
+    "uuid": "^9.0.0",
+    "winston": "^3.10.0"
+  },
+  "devDependencies": {
+    "@types/jest": "^29.5.0",
+    "@types/node": "^20.0.0",
+    "@types/uuid": "^9.0.8",
+    "@typescript-eslint/eslint-plugin": "^6.0.0",
+    "@typescript-eslint/parser": "^6.0.0",
+    "eslint": "^8.45.0",
+    "fast-check": "^3.12.0",
+    "jest": "^29.6.0",
+    "ts-jest": "^29.1.0",
+    "ts-node": "^10.9.0",
+    "typescript": "^5.1.0"
+  }
+}

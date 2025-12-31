@@ -1,0 +1,8 @@
+apiVersion: v1
+kind: Namespace
+metadata:
+  name: llm-monitor
+  labels:
+    name: llm-monitor
+    app.kubernetes.io/name: llm-observability-monitor
+    app.kubernetes.io/version: "1.0.0"
