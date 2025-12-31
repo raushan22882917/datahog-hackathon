@@ -1,4 +1,4 @@
-# LLM Observability Monitor
+# LLM Observability Monitor - Datahog Hackathon
 
 An innovative end-to-end monitoring solution that tracks the health, performance, and security of Large Language Model applications powered by Google Cloud's Vertex AI or Gemini. The system streams comprehensive telemetry data to Datadog, implements intelligent detection rules, and provides actionable insights through dashboards and automated incident management.
 
