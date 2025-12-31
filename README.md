@@ -64,7 +64,9 @@ APP_ENVIRONMENT=production
    - Create a service account in Google Cloud Console
    - Enable Vertex AI API and Cloud DLP API
    - Download the service account key JSON file
-   - Set the path in `GOOGLE_APPLICATION_CREDENTIALS`
+   - Place it in the `config/` directory (e.g., `config/your-service-account.json`)
+   - Set the path in `GOOGLE_APPLICATION_CREDENTIALS` environment variable
+   - **Note**: Never commit credential files to version control. Use the provided `config/service-account-example.json` as a template.
 
 4. **Set up Datadog:**
    - Get API and App keys from Datadog dashboard
