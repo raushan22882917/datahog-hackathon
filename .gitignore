@@ -49,6 +49,7 @@ pids/
 # Google Cloud credentials
 service-account*.json
 credentials.json
+buiseness-417505-869ea53acfcd.json
 
 # Temporary files
 tmp/
